@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/coin.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+    <div class="background">
+        <div onclick="cleanMessage()" class="clean-message">
+            Limpar
+        </div>
+        <div class="project-title">
+            <h1>Conversor de Moedas</h1>
+        </div>
+        <div class="background-campos">
+            <div class="valor-de-origem-area">
+                <label for="valor-de-origem-input">Valor</label>
+                <input type="text" name="valor-de-origem-input" class="valor-de-origem-input" placeholder="1,00">
+            </div>
+            <div class="moeda-de-origem-area">
+                <label for="moeda-de-origem-input">De</label>
+                <select name="moeda-de-origem-area" class="moeda-de-origem-input" placeholder="Digite para pesquisar...">
+                    <option value="none">Clique para escolher...</option>
+                </select>
+            </div>
+            <div onclick="reverseExchange()" class="inverter-moedas">
+                <img src="images/troca.png" alt="">
+            </div>
+            <div class="moeda-de-destino-area">
+                <label for="moeda-de-destino-input">Para</label>
+                <select name="moeda-de-destino-input" class="moeda-de-destino-input">
+                    <option value="none">Clique para escolher...</option>
+                </select>
+            </div>
+        </div>
+        <div class="valor-de-destino-area">
+            <p class="valor-de-destino">O valor aparecerá aqui.</p>
+        </div>
+        <div onclick="ExchangeCalculate()" class="botao-converter">
+            <p>Converter</p>
+        </div>
+        <div class="creditos">
+            <p>Desenvolvido por <a target="_blank" href="https://www.linkedin.com/in/nathan-moreira-de-macedo/">Nathan Moreira de Macedo</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
