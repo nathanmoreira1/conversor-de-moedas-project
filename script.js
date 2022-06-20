@@ -19,7 +19,7 @@ CallAPI("USD").then(
 
 const ExchangeCalculate = () => {
     ShowWarning("Carregando...")
-    let valor_de_origem = parseFloat(document.querySelector(".valor-de-origem-input").value.replace(",",".")).toFixed(2);
+    let valor_de_origem = document.querySelector(".valor-de-origem-input").value.replace(",",".");
     let moeda_de_origem = document.querySelector(".moeda-de-origem-input").selectedOptions[0].value;
     let moeda_de_destino = document.querySelector(".moeda-de-destino-input").selectedOptions[0].value;
 
@@ -38,8 +38,13 @@ const ExchangeCalculate = () => {
         .catch(
             setTimeout(() => {
                 ShowWarning("Calcular");
-            }, 1500)
+            }, 1500),
         )
+    }
+    else {
+        setTimeout(() => {
+            ShowWarning("Calcular");
+        }, 1500)
     }
 }
 
