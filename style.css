@@ -219,7 +219,7 @@ body {
 @media (max-width: 390px) {
     .background {
         width: 330px;
-        top: 7px;
+        top: 20px;
     }
     .project-title h1 {
         font-size: 27px;
